@@ -1,0 +1,155 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>PULSE BMI</title>
+
+    <link rel="stylesheet" href="style.css" />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body>
+    <!-- HEADER -->
+
+    <header class="header">
+      <div class="logo">
+        <span class="heart-icon">♥</span>
+
+        <h1>PULSE_BMI</h1>
+      </div>
+
+      <button class="top-btn">CALCULATE</button>
+    </header>
+
+    <!-- MAIN -->
+
+    <main class="main-container">
+      <!-- HERO SECTION -->
+
+      <section class="hero-section">
+        <div class="hero-text">
+          <span class="hero-tag"> Precision Metrics </span>
+
+          <h2>Know Your Numbers</h2>
+
+          <p>
+            Unlock professional-grade biometric analysis. Pulse BMI provides
+            instant and accurate body mass index data to support your fitness
+            journey.
+          </p>
+        </div>
+
+        <div class="hero-image">
+          <img
+            src="https://images.unsplash.com/photo-1517836357463-d25dfeac3438?q=80&w=1200&auto=format&fit=crop"
+            alt="fitness"
+          />
+        </div>
+      </section>
+
+      <!-- BMI GRID -->
+
+      <section class="bmi-grid">
+        <!-- INPUT CARD -->
+
+        <div class="card">
+          <div class="card-top">
+            <h3>Biometric Input</h3>
+
+            <div class="unit-toggle">
+              <button id="metric-btn" class="active">METRIC</button>
+
+              <button id="imperial-btn">IMPERIAL</button>
+            </div>
+          </div>
+
+          <!-- HEIGHT -->
+
+          <div class="slider-group">
+            <div class="slider-info">
+              <label id="height-label"> HEIGHT (CM) </label>
+
+              <span id="height-value"> 180 </span>
+            </div>
+
+            <input
+              id="height-slider"
+              type="range"
+              min="100"
+              max="250"
+              value="180"
+            />
+          </div>
+
+          <!-- WEIGHT -->
+
+          <div class="slider-group">
+            <div class="slider-info">
+              <label id="weight-label"> WEIGHT (KG) </label>
+
+              <span id="weight-value"> 75 </span>
+            </div>
+
+            <input
+              id="weight-slider"
+              type="range"
+              min="30"
+              max="200"
+              value="75"
+            />
+          </div>
+
+          <!-- BUTTON -->
+
+          <button id="calculate-btn" class="calculate-btn">
+            CALCULATE BMI
+          </button>
+        </div>
+
+        <!-- RESULT CARD -->
+
+        <div class="card result-card">
+          <div class="circle">
+            <svg>
+              <circle
+                id="progress-circle"
+                class="progress-circle"
+                cx="50%"
+                cy="50%"
+                r="48%"
+              ></circle>
+            </svg>
+
+            <span id="bmi-number" class="bmi-number"> 23.1 </span>
+
+            <span class="bmi-label"> BMI </span>
+          </div>
+
+          <div id="status-text" class="status">NORMAL WEIGHT</div>
+
+          <p id="result-text" class="result-text">
+            Your BMI indicates you are in a healthy weight range for your
+            height.
+          </p>
+        </div>
+      </section>
+
+      <!-- BMI CATEGORIES -->
+<!--  -->
+    </main>
+
+    <!-- FOOTER -->
+
+    <footer class="footer">
+      <p>© 2026 PULSE_BMI — Stay Healthy</p>
+    </footer>
+        <script src="script.js"></script>
+
+  </body>
+</html>
